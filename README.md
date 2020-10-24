@@ -39,9 +39,9 @@ Sample Configuration
     local M = {}
     M.project = require 'project'
 
-    keys.ag = { M.project.goto_symbol }
-    keys.ao = { M.project.project_quickopen }
-    keys.ap = { M.project.selectProject }
+    keys['alt+g'] = function() M.project.goto_symbol() end
+    keys['alt+o'] = function() M.project.project_quickopen() end
+    keys['alt+p']= function() M.project.selectProject() end
 
     M.project.projects = {
         Project1 = {
